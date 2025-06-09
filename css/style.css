@@ -219,6 +219,40 @@ figure {
   max-width: 1170px;
   margin: 0 auto; }
 
+.top-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  padding: 10px 0;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+  color: #fff;
+  font-size: 14px;
+}
+
+.banner-text a {
+  color: #4FC3F7;
+  text-decoration: underline;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 #colorlib-main {
   width: calc(100% - 300px);
   float: right;
