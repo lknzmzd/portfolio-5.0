@@ -72,6 +72,18 @@ figure {
   overflow: hidden;
   position: relative; }
 
+.colorlib-feature-sm .colorlib-icon {
+  font-size: 30px; /* reduce the icon size */
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.colorlib-feature-sm .colorlib-icon i {
+  font-size: 28px; /* specifically for the <i> icon */
+}
+
+
 #colorlib-aside {
   padding-top: 3em;
   padding-bottom: 40px;
