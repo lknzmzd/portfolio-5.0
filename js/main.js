@@ -1,3 +1,5 @@
+
+
 ;(function () {
 	
 	'use strict';
@@ -305,6 +307,44 @@
 		stickyFunction();
 		owlCrouselFeatureSlide();
 	});
+
+	function getTextByKey(key, locale) {
+		const parts = key.split('.');
+		let obj = i18n[locale] || i18n.en;
+		for (const p of parts) obj = (obj || {})[p];
+		return (typeof obj === 'string') ? obj : null;
+	}
+
+	function applyTranslations(locale) {
+		document.querySelectorAll('[data-i18n]').forEach(el => {
+			const key = el.getAttribute('data-i18n');
+			const txt = getTextByKey(key, locale);
+			if (!txt) return;
+
+			const tag = el.tagName.toLowerCase();
+			if ((tag === 'input' || tag === 'textarea') && el.hasAttribute('placeholder')) {
+				el.placeholder = txt;
+			} else {
+				el.textContent = txt;
+			}
+		});
+		document.documentElement.setAttribute('lang', locale);
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const select = document.getElementById('lang-switch'); // ✅ match HTML
+
+		if (!select) return;
+		const saved = localStorage.getItem('lang') || 'en';
+		select.value = saved;
+		applyTranslations(saved);
+		select.addEventListener('change', e => {
+			const locale = e.target.value || 'en';
+			localStorage.setItem('lang', locale);
+			applyTranslations(locale);
+		});
+	});
+
 
 
 }());

@@ -53,7 +53,8 @@
 	<body>
 	<div class="top-banner">
   		<div class="banner-text">
-    		🚀 This is my personal project website: <a href="https://www.lknzmzd.com" target="_blank">www.lknzmzd.com</a>
+    		🚀 <span data-i18n="banner.text"> This is my personal project website:</span> 
+			<a href="https://www.lknzmzd.com" target="_blank">www.lknzmzd.com</a>
   		</div>
 	</div>
 
@@ -65,21 +66,35 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Ilkin Azimzade</a></h1>
-				<span class="position"><a href="#">Data Scientist</a> in Poland</span>
+				<span class="position" data-i18n="role"><a href="#">Data Scientist</a> in Poland</span>
 			</div>
+			
+
+
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
 					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
+						<li class="active"><a href="#" data-nav-section="home" data-i18n="nav.home">Home</a></li>
+						<li><a href="#" data-nav-section="about" data-i18n="nav.about">About</a></li>
 						<!-- <li><a href="#" data-nav-section="services">Services</a></li> -->
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="skills" data-i18n="nav.skills">Skills</a></li>
+						<li><a href="#" data-nav-section="education" data-i18n="nav.education">Education</a></li>
+						<li><a href="#" data-nav-section="experience" data-i18n="nav.experience">Experience</a></li>
 						<!--<li><a href="#" data-nav-section="work">Work</a></li> -->
 						<!--<li><a href="#" data-nav-section="blog">Blog</a></li> -->
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
+						<li><a href="#" data-nav-section="contact" data-i18n="nav.contact">Contact</a></li>
 					</ul>
+					<!-- Language Switcher -->
+					<div class="lang-switch">
+						<label for="lang-switch" class="sr-only">Language</label>
+						<select id="lang-switch" aria-label="Language">
+							<option value="en">English</option>
+							<option value="de">Deutsch</option>
+							<option value="pl">Polski</option>
+							<option value="ru">Русский</option>
+							<option value="az">Azərbaycanca</option>
+						</select>
+					</div>
 				</div>
 			</nav>
 
@@ -105,12 +120,10 @@
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
-						   					<h1>Hi! <br>I'm Ilkin</h1>
+						   					<h1 data-i18n="hero.title1">Hi! <br>I'm Ilkin</h1>
 						   					<!--<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2> -->
 												<p>
-													<a href="assets/cv_ilkin_azimzade.pdf" class="btn btn-primary btn-learn" download>
-														Download CV <i class="icon-download4"></i>
-													</a>
+													<a href="assets/cv_ilkin_azimzade.pdf" class="btn btn-primary btn-learn" download data-i18n="hero.download">Download CV</a>
 												</p>
 
 											</div>
@@ -126,9 +139,9 @@
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<h1>I am <br>a Data Scientist</h1>
+						   					<h1 data-i18n="hero.title2">I am <br>a Data Scientist</h1>
 												<!--<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>-->
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
+												<p><a class="btn btn-primary btn-learn" data-i18n="hero.portfolio">View Portfolio <i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -146,10 +159,10 @@
 							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="col-md-12">
 									<div class="about-desc">
-										<span class="heading-meta">About Us</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>I'm Ilkin Azimzade —</strong> a multidisciplinary technologist with a passion for data, innovation, and real-world problem-solving. With a strong foundation in geospatial analysis, programming, and logistics, I'm currently pursuing a Ph.D. in Management Information Systems. </p>
-										<p>My journey has taken me through hands-on technical roles, team leadership, and international academic programs, all fueled by a drive to connect systems, people, and ideas through smart, data-driven solutions. Whether it's robotics, 3D printing, or geodata science, I thrive at the intersection of technology and impact.</p>
+										<span class="heading-meta" data-i18n="about.meta">About Us</span>
+										<h2 class="colorlib-heading" data-i18n="about.title">Who Am I?</h2>
+										<p data-i18n="about.p1"><strong>I'm Ilkin Azimzade —</strong> a multidisciplinary technologist with a passion for data, innovation, and real-world problem-solving. With a strong foundation in geospatial analysis, programming, and logistics, I'm currently pursuing a Ph.D. in Management Information Systems. </p>
+										<p data-i18n="about.p2">My journey has taken me through hands-on technical roles, team leadership, and international academic programs, all fueled by a drive to connect systems, people, and ideas through smart, data-driven solutions. Whether it's robotics, 3D printing, or geodata science, I thrive at the intersection of technology and impact.</p>
 									</div>
 								</div>
 							</div>
@@ -157,32 +170,32 @@
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 									<div class="services color-1">
 										<!-- <span class="icon2"><i class='bxr  bx-robot'></i> </span> -->
-										<h3>Robotics & Automation</h3>
-										<p>Building intelligent systems and humanoid robots combining hardware and software design.</p>
+										<h3 data-i18n="services.robotics">Robotics & Automation</h3>
+										<p data-i18n="services.robotics.desc">Building intelligent systems and humanoid robots combining hardware and software design.</p>
 									</div>
 								</div>
 
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
 									<div class="services color-2">
 										<!-- <span class="icon2"><i class="icon-globe-outline"></i></span> -->
-										<h3>Geospatial & GIS</h3>
-										<p>Expert in remote sensing, GNSS, and geospatial analysis using QGIS, ArcGIS, EGMS & SNAP.</p>
+										<h3 data-i18n="services.geospatial">Geospatial & GIS</h3>
+										<p data-i18n="services.geospatial.desc">Expert in remote sensing, GNSS, and geospatial analysis using QGIS, ArcGIS, EGMS & SNAP.</p>
 									</div>
 								</div>
 
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
 									<div class="services color-3">
 										<!-- <span class="icon2"><i class="icon-data"></i></span> -->
-										<h3>Data Science</h3>
-										<p>Proficient in Python, R, and machine learning, with experience in both system-level and field applications.</p>
+										<h3 data-i18n="services.data_science">Data Science</h3>
+										<p data-i18n="services.data_science.desc">Proficient in Python, R, and machine learning, with experience in both system-level and field applications.</p>
 									</div>
 								</div>
 
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
 									<div class="services color-4">
 										<!-- <span class="icon2"><i class="icon-tools"></i></span> -->
-										<h3>Prototyping & 3D Printing</h3>
-										<p>Designing and printing functional parts for robotics and experimental systems using digital fabrication tools.</p>
+										<h3 data-i18n="services.prototyping">Prototyping & 3D Printing</h3>
+										<p data-i18n="services.prototyping.desc">Designing and printing functional parts for robotics and experimental systems using digital fabrication tools.</p>
 									</div>
 								</div>
 							</div>
@@ -289,19 +302,19 @@
 					<div class="row">
 						<div class="col-md-3 text-center animate-box">
 							<span class="colorlib-counter js-counter" data-from="0" data-to="1313" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Cups of coffee</span>
+							<span class="colorlib-counter-label" data-i18n="counters.coffee">Cups of coffee</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
 							<span class="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Projects</span>
+							<span class="colorlib-counter-label" data-i18n="counters.projects">Projects</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
 							<span class="colorlib-counter js-counter" data-from="0" data-to="87" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Courses I Have Completed</span>
+							<span class="colorlib-counter-label" data-i18n="counters.courses">Courses I Have Completed</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
 							<span class="colorlib-counter js-counter" data-from="0" data-to="4" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Events Volunteered</span>
+							<span class="colorlib-counter-label" data-i18n="counters.events">Events Volunteered</span>
 						</div>
 					</div>
 				</div>
@@ -311,21 +324,21 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Specialty</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
+							<span class="heading-meta" data-i18n="skills.meta">My Specialty</span>
+							<h2 class="colorlib-heading animate-box" data-i18n="skills.title">My Skills</h2>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>I combine strong coding, spatial analysis, and hardware skills to solve real-world problems—from geospatial data pipelines to smart robotics systems.</p>
+							<p data-i18n="skills.intro">I combine strong coding, spatial analysis, and hardware skills to solve real-world problems—from geospatial data pipelines to smart robotics systems.</p>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="progress-wrap">
-								<h3>Python</h3>
+								<h3 data-i18n="skills.python">Python</h3>
 								<div class="progress">
 								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
 								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
+								    <span data-i18n="skills.python.level">50%</span>
 								  	</div>
 								</div>
 							</div>
@@ -376,11 +389,11 @@
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 							<div class="progress-wrap">
-								<h3>Remote Sensing (QGIS, SNAP, EGMS)</h3>
+								<h3 data-i18n="skills.remote_sensing">Remote Sensing (QGIS, SNAP, EGMS)</h3>
 								<div class="progress">
 								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
 								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>70%</span>
+								    <span data-i18n="skills.remote_sensing.level">70%</span>
 								  	</div>
 								</div>
 							</div>
@@ -393,8 +406,8 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
+							<span class="heading-meta" data-i18n="education.meta">Education</span>
+							<h2 class="colorlib-heading" data-i18n="education.title">Education</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -430,29 +443,58 @@
 									        </h4>
 									    </div>
 									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <p>This portfolio showcases my academic and professional journey focused on geospatial technologies, machine learning, and smart decision support systems. My goal is to present real-world applications of data science and geospatial analysis in areas such as urban hazard monitoring, environmental sustainability, and intelligent system design. The portfolio includes selected research projects, code samples (Python, R), visualizations, and systematic reviews, demonstrating both technical skills and interdisciplinary problem-solving.</p>
-													<ul>
-														<li><strong>Focus:</strong> Integration of geospatial data, machine learning, and cloud-based DSS for real-time urban disaster response.</li>
-														<li><strong>Geospatial Intelligence:</strong> Utilized satellite imagery (Sentinel, Landsat), LiDAR, and UAVs for multi-hazard detection.</li>
-														<li><strong>Machine Learning Models:</strong> Applied supervised (Random Forests, Decision Trees), unsupervised (Clustering), and deep learning (CNN, RNN) techniques for predictive geohazard modeling.</li>
-														<li><strong>System Integration:</strong> Identified the research gap in real-time, end-to-end systems for urban resilience planning.</li>
-														<li><strong>Tools & Languages:</strong> Leveraged Python and R for data processing, ML model development, and geospatial analysis.</li>
-														<li><strong>Future Vision:</strong> Advocated for explainable AI, user-centered DSS design, and cross-city deployment for smart, resilient cities.</li>
-													</ul>
-									        </div>
-									    </div>
+											<div class="panel-body">
+												<p data-i18n="edu.phd.desc">
+													This portfolio showcases my academic and professional journey focused on geospatial technologies, machine learning, and smart decision support systems…
+												</p>
+												<ul>
+													<li>
+														<strong data-i18n="edu.phd.points.focus.title">Focus:</strong>
+														<span data-i18n="edu.phd.points.focus.text">Integration of geospatial data, machine learning, and cloud-based DSS for real-time urban disaster response.</span>
+													</li>
+													<li>
+														<strong data-i18n="edu.phd.points.geoInt.title">Geospatial Intelligence:</strong>
+														<span data-i18n="edu.phd.points.geoInt.text">Utilized satellite imagery (Sentinel, Landsat), LiDAR, and UAVs for multi-hazard detection.</span>
+													</li>
+													<li>
+														<strong data-i18n="edu.phd.points.ml.title">Machine Learning Models:</strong>
+														<span data-i18n="edu.phd.points.ml.text">Applied supervised (Random Forests, Decision Trees), unsupervised (Clustering), and deep learning (CNN, RNN) techniques for predictive geohazard modeling.</span>
+													</li>
+													<li>
+														<strong data-i18n="edu.phd.points.system.title">System Integration:</strong>
+														<span data-i18n="edu.phd.points.system.text">Identified the research gap in real-time, end-to-end systems for urban resilience planning.</span>
+													</li>
+													<li>
+														<strong data-i18n="edu.phd.points.tools.title">Tools &amp; Languages:</strong>
+														<span data-i18n="edu.phd.points.tools.text">Leveraged Python and R for data processing, ML model development, and geospatial analysis.</span>
+													</li>
+													<li>
+														<strong data-i18n="edu.phd.points.future.title">Future Vision:</strong>
+														<span data-i18n="edu.phd.points.future.text">Advocated for explainable AI, user-centered DSS design, and cross-city deployment for smart, resilient cities.</span>
+													</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingThree">
 									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">M.Sc. in Geomatics for Mineral Resource Management (Double Degree)
+									            <a class="collapsed" 
+													data-toggle="collapse" 
+													data-parent="#accordion" 
+													href="#collapseThree" 
+													aria-expanded="false" 
+													aria-controls="collapseThree"
+													data-i18n="edu.msc.title">
+        											M.Sc. in Geomatics for Mineral Resource Management (Double Degree)
 									            </a>
 									        </h4>
 									    </div>
 									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 									        <div class="panel-body">
-									            <p>An interdisciplinary program combining remote sensing, GIS, and geospatial data analysis. Master's thesis focused on land deformation monitoring using InSAR and EGMS datasets. This program provided extensive hands-on experience with tools like SNAP, QGIS, and satellite imagery analysis for sustainable resource management.</p>	
+									            <p data-i18n="edu.msc.desc">
+													An interdisciplinary program combining remote sensing, GIS, and geospatial data analysis. Master's thesis focused on land deformation monitoring using InSAR and EGMS datasets. This program provided extensive hands-on experience with tools like SNAP, QGIS, and satellite imagery analysis for sustainable resource management.
+												</p>	
 									        </div>
 									    </div>
 									</div>
@@ -495,8 +537,8 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Work Experience</h2>
+							<span class="heading-meta" data-i18n="experience.meta">Experience</span>
+							<h2 class="colorlib-heading" data-i18n="experience.title">Work Experience</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -510,12 +552,32 @@
 					               </div>
 
 					               <div class="timeline-label">
-					                  	<h2><a href="#">Qsense</a> <span>2022-Present</span></h2>
-					                  	<p><strong>Visual Quality Controller: </strong>Ensuring product standards were consistently met.
- 										<p><strong>Logistics Team: </strong>Managing inventory flow, shipment coordination, and material handling.
- 										<p><strong>Team Leader: </strong>Where I supervised daily operations, optimized workflow efficiency, and supported cross-functional collaboration.
-										<p><strong>Technician: </strong>Implementing and maintaining advanced systems, resolving technical issues, and developing technical documentation.</p>
-					               </div>
+										<h2>
+											<a href="#" data-i18n="exp.qsense.company">Qsense</a>
+											<span data-i18n="exp.qsense.period">2022–Present</span>
+										</h2>
+
+										<ul class="role-list">
+											<li>
+												<strong data-i18n="exp.qsense.roles.tech.title">Technician:</strong>
+												<span data-i18n="exp.qsense.roles.tech.desc">Implemented and maintained advanced systems, resolved technical issues, and wrote technical documentation.</span>
+											</li>
+											<li>
+												<strong data-i18n="exp.qsense.roles.lead.title">Team Leader:</strong>
+												<span data-i18n="exp.qsense.roles.lead.desc">Supervised daily operations, optimized workflow efficiency, and supported cross-functional collaboration.</span>
+											</li>
+											<li>
+												<strong data-i18n="exp.qsense.roles.log.title">Logistics Team:</strong>
+												<span data-i18n="exp.qsense.roles.log.desc">Managing inventory flow, shipment coordination, and material handling.</span>
+											</li>
+											<li>
+												<strong data-i18n="exp.qsense.roles.vqc.title">Visual Quality Controller:</strong>
+												<span data-i18n="exp.qsense.roles.vqc.desc">Ensuring product standards were consistently met.</span>
+											</li>
+											
+										</ul>
+									</div>
+
 					            </div>
 					         </article>
 
@@ -745,8 +807,8 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
+							<span class="heading-meta" data-i18n="contact.meta">Get in Touch</span>
+							<h2 class="colorlib-heading" data-i18n="contact.title">Contact</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -888,9 +950,425 @@
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	
+
 	
+	
+
+	<script>
+	/* ---  i18n dictionary  --- */
+	const i18n = {
+		en: {
+			role: "Data Scientist in Poland",
+			banner: { text: "This is my personal project website:" },
+			nav: {
+			home: "Home",
+			about: "About",
+			skills: "Skills",
+			education: "Education",
+			experience: "Experience",
+			contact: "Contact"
+			},
+			hero: {
+			title1: "Hi! <br>I'm Ilkin",
+			title2: "I am <br>a Data Scientist",
+			download: "Download CV",
+			portfolio: "View Portfolio"
+			},
+			about: {
+			meta: "About Me",
+			title: "Who Am I?",
+			p1: "I'm Ilkin Azimzade — a multidisciplinary technologist with a passion for data, innovation, and real-world problem-solving. With a strong foundation in geospatial analysis, programming, and logistics, I'm currently pursuing a Ph.D. in Management Information Systems.",
+			p2: "My journey has taken me through hands-on technical roles, team leadership, and international academic programs, all fueled by a drive to connect systems, people, and ideas through smart, data-driven solutions. Whether it's robotics, 3D printing, or geodata science, I thrive at the intersection of technology and impact."
+			},
+			services: {
+			robotics: "Robotics & Automation",
+			"robotics.desc": "Building intelligent systems and humanoid robots combining hardware and software design.",
+			geospatial: "Geospatial & GIS",
+			"geospatial.desc": "Expert in remote sensing, GNSS, and geospatial analysis using QGIS, ArcGIS, EGMS & SNAP.",
+			data_science: "Data Science",
+			"data_science.desc": "Proficient in Python, R, and machine learning, with experience in both system-level and field applications.",
+			prototyping: "Prototyping & 3D Printing",
+			"prototyping.desc": "Designing and printing functional parts for robotics and experimental systems using digital fabrication tools."
+			},
+			counters: {
+			coffee: "Cups of coffee",
+			projects: "Projects",
+			courses: "Courses I Have Completed",
+			events: "Events Volunteered"
+			},
+			skills: {
+			meta: "My Specialty",
+			title: "My Skills",
+			intro: "I combine strong coding, spatial analysis, and hardware skills to solve real-world problems—from geospatial data pipelines to smart robotics systems.",
+			python: "Python",
+			"python.level": "50%",
+			remote_sensing: "Remote Sensing (QGIS, SNAP, EGMS)",
+			"remote_sensing.level": "70%"
+			},
+			education: { meta: "Education", title: "Education" },
+			edu: {
+			phd: {
+				desc: "This portfolio showcases my academic and professional journey focused on geospatial technologies, machine learning, and smart decision support systems…",
+				points: {
+				focus: { title: "Focus:", text: "Integration of geospatial data, machine learning, and cloud-based DSS for real-time urban disaster response." },
+				geoInt: { title: "Geospatial Intelligence:", text: "Utilized satellite imagery (Sentinel, Landsat), LiDAR, and UAVs for multi-hazard detection." },
+				ml: { title: "Machine Learning Models:", text: "Applied supervised (Random Forests, Decision Trees), unsupervised (Clustering), and deep learning (CNN, RNN) techniques for predictive geohazard modeling." },
+				system: { title: "System Integration:", text: "Identified the research gap in real-time, end-to-end systems for urban resilience planning." },
+				tools: { title: "Tools & Languages:", text: "Leveraged Python and R for data processing, ML model development, and geospatial analysis." },
+				future: { title: "Future Vision:", text: "Advocated for explainable AI, user-centered DSS design, and cross-city deployment for smart, resilient cities." }
+				}
+			},
+			msc: {
+				title: "M.Sc. in Geomatics for Mineral Resource Management (Double Degree)",
+				desc: "An interdisciplinary program combining remote sensing, GIS, and geospatial data analysis. Master's thesis focused on land deformation monitoring using InSAR and EGMS datasets. This program provided extensive hands-on experience with tools like SNAP, QGIS, and satellite imagery analysis for sustainable resource management."
+			},
+			bsc: {
+				title: "B.Sc. in Oil and Gas Equipment Engineering",
+				desc: "A strong engineering foundation focused on petroleum systems, pipeline design, and technical operations in the energy industry. Covered both theoretical knowledge and practical skills in oil and gas technologies, preparing for real-world engineering roles."
+			}
+			},
+			experience: { meta: "Experience", title: "Work Experience" },
+			exp: {
+			qsense: {
+				company: "Qsense",
+				period: "2022–Present",
+				roles: {
+				tech: { title: "Technician:", desc: "Implemented and maintained advanced systems, resolved technical issues, and wrote technical documentation." },
+				lead: { title: "Team Leader:", desc: "Supervised daily operations, optimized workflow efficiency, and supported cross-functional collaboration." },
+				log: { title: "Logistics Team:", desc: "Managing inventory flow, shipment coordination, and material handling." },
+				vqc: { title: "Visual Quality Controller:", desc: "Ensuring product standards were consistently met." }
+				}
+			}
+			},
+			contact: { meta: "Get in Touch", title: "Contact" }
+		},
+
+		/* ========================== GERMAN ========================== */
+		de: {
+			role: "Data Scientist in Polen",
+			banner: { text: "Dies ist meine persönliche Projektwebsite:" },
+			nav: { home:"Startseite", about:"Über mich", skills:"Fähigkeiten", education:"Ausbildung", experience:"Erfahrung", contact:"Kontakt" },
+			hero: { title1:"Hallo! <br>Ich bin Ilkin", title2:"Ich bin <br>Data Scientist", download:"Lebenslauf herunterladen", portfolio:"Portfolio ansehen" },
+			about: { meta:"Über mich", title:"Wer bin ich?", p1:"Ich bin Ilkin Azimzade — ein multidisziplinärer Technologe mit Leidenschaft für Daten, Innovation und praxisorientierte Problemlösung.", p2:"Meine Reise führte mich durch technische Rollen, Teamleitung und internationale akademische Programme, angetrieben von dem Ziel, Systeme, Menschen und Ideen durch datengesteuerte Lösungen zu verbinden." },
+			services: { robotics:"Robotik & Automatisierung", "robotics.desc":"Aufbau intelligenter Systeme und humanoider Roboter durch Hard- und Softwaredesign.", geospatial:"Geodaten & GIS", "geospatial.desc":"Experte für Fernerkundung, GNSS und Geodatenanalyse mit QGIS, ArcGIS, EGMS & SNAP.", data_science:"Datenwissenschaft", "data_science.desc":"Erfahren in Python, R und maschinellem Lernen in praktischen und systembezogenen Anwendungen.", prototyping:"Prototyping & 3D-Druck", "prototyping.desc":"Entwicklung und Druck funktionaler Teile für Robotik und experimentelle Systeme." },
+			counters: { coffee:"Tassen Kaffee", projects:"Projekte", courses:"Kurse abgeschlossen", events:"Freiwillige Veranstaltungen" },
+			skills: { meta:"Meine Spezialität", title:"Meine Fähigkeiten", intro:"Ich kombiniere Programmierung, Raumdatenanalyse und Hardware, um reale Probleme zu lösen.", python:"Python", "python.level":"50%", remote_sensing:"Fernerkundung (QGIS, SNAP, EGMS)", "remote_sensing.level":"70%" },
+			education: { meta:"Ausbildung", title:"Ausbildung" },
+			edu: { msc: { title:"M.Sc. in Geomatik für Rohstoffmanagement (Doppelabschluss)", desc:"Ein interdisziplinäres Programm mit Schwerpunkt auf Fernerkundung, GIS und geodatenbasierter Analyse. Masterarbeit über Bodensenkungen mit InSAR und EGMS." }, bsc:{ title:"B.Sc. in Öl- und Gasausrüstungstechnik", desc:"Starke Grundlagen im Ingenieurwesen mit Schwerpunkt auf Pipelinesystemen, Energieanlagen und Petroleumtechnik." } },
+			experience: { meta:"Erfahrung", title:"Berufserfahrung" },
+			exp: { qsense: { company:"Qsense", period:"2022–Heute", roles:{ tech:{title:"Techniker:",desc:"Implementierte Systeme, löste technische Probleme und erstellte Dokumentationen."}, lead:{title:"Teamleiter:",desc:"Leitete tägliche Abläufe und optimierte Arbeitsprozesse."}, log:{title:"Logistikteam:",desc:"Verwaltung von Inventar, Versand und Materialfluss."}, vqc:{title:"Qualitätskontrolleur:",desc:"Sicherstellung gleichbleibender Produktqualität."} } } },
+			contact: { meta:"Kontakt aufnehmen", title:"Kontakt" }
+		},
+
+		pl: {
+			role: "Data Scientist w Polsce",
+			banner: { text: "To jest moja osobista strona projektowa:" },
+			nav: {
+			home: "Strona główna",
+			about: "O mnie",
+			skills: "Umiejętności",
+			education: "Edukacja",
+			experience: "Doświadczenie",
+			contact: "Kontakt"
+			},
+			hero: {
+			title1: "Cześć! <br>Jestem Ilkin",
+			title2: "Jestem <br>Data Scientist",
+			download: "Pobierz CV",
+			portfolio: "Zobacz portfolio"
+			},
+			about: {
+			meta: "O mnie",
+			title: "Kim jestem?",
+			p1: "Jestem Ilkin Azimzade — multidyscyplinarny technolog z pasją do danych, innowacji i rozwiązywania rzeczywistych problemów. Mam solidne podstawy w analizie geoprzestrzennej, programowaniu i logistyce. Obecnie realizuję doktorat z systemów informacyjnych w zarządzaniu.",
+			p2: "Moja droga obejmuje techniczne role praktyczne, kierowanie zespołem i międzynarodowe programy akademickie, a wszystko to napędzane chęcią łączenia systemów, ludzi i pomysłów poprzez inteligentne rozwiązania oparte na danych."
+			},
+			services: {
+			robotics: "Robotyka i Automatyzacja",
+			"robotics.desc": "Budowa inteligentnych systemów i robotów humanoidalnych łączących projektowanie sprzętu i oprogramowania.",
+			geospatial: "Geoinformacja i GIS",
+			"geospatial.desc": "Specjalista w zakresie teledetekcji, GNSS i analiz geoprzestrzennych z użyciem QGIS, ArcGIS, EGMS i SNAP.",
+			data_science: "Data Science",
+			"data_science.desc": "Biegły w Pythonie, R i uczeniu maszynowym, z doświadczeniem zarówno w zastosowaniach praktycznych, jak i systemowych.",
+			prototyping: "Prototypowanie i Druk 3D",
+			"prototyping.desc": "Projektowanie i drukowanie funkcjonalnych części dla robotyki i systemów eksperymentalnych z użyciem narzędzi cyfrowych."
+			},
+			counters: {
+			coffee: "Wypite kawy",
+			projects: "Projekty",
+			courses: "Ukończone kursy",
+			events: "Wolontariat na wydarzeniach"
+			},
+			skills: {
+			meta: "Moja specjalizacja",
+			title: "Moje umiejętności",
+			intro: "Łączę programowanie, analizę przestrzenną i umiejętności sprzętowe, aby rozwiązywać rzeczywiste problemy — od potoków danych geoprzestrzennych po inteligentne systemy robotyczne.",
+			python: "Python",
+			"python.level": "50%",
+			remote_sensing: "Teledetekcja (QGIS, SNAP, EGMS)",
+			"remote_sensing.level": "70%"
+			},
+			education: { meta: "Edukacja", title: "Edukacja" },
+			edu: {
+			phd: {
+				desc: "To portfolio przedstawia moją drogę akademicką i zawodową skoncentrowaną na technologiach geoprzestrzennych, uczeniu maszynowym i inteligentnych systemach wspomagania decyzji…",
+				points: {
+				focus: { title: "Specjalizacja:", text: "Integracja danych geoprzestrzennych, uczenia maszynowego i systemów DSS w czasie rzeczywistym dla reagowania kryzysowego w miastach." },
+				geoInt: { title: "Inteligencja geoprzestrzenna:", text: "Wykorzystanie zobrazowań satelitarnych (Sentinel, Landsat), LiDAR i UAV do wykrywania zagrożeń." },
+				ml: { title: "Modele uczenia maszynowego:", text: "Zastosowanie metod nadzorowanych (Random Forest, drzewa decyzyjne), nienadzorowanych (klasteryzacja) i głębokiego uczenia (CNN, RNN)." },
+				system: { title: "Integracja systemów:", text: "Identyfikacja luki badawczej w systemach czasu rzeczywistego dla planowania odporności miejskiej." },
+				tools: { title: "Narzędzia i języki:", text: "Python i R do przetwarzania danych, budowy modeli ML i analiz geoprzestrzennych." },
+				future: { title: "Wizja przyszłości:", text: "Rozwój wyjaśnialnej AI, projektowanie DSS zorientowanego na użytkownika i wdrożenia między miastami dla inteligentnych i odpornych metropolii."
+				}
+				}
+			},
+			msc: {
+				title: "M.Sc. Geomatyka w Zarządzaniu Zasobami Mineralnymi (Podwójny Dyplom)",
+				desc: "Interdyscyplinarny program łączący teledetekcję, GIS i analizę danych geoprzestrzennych. Praca magisterska dotyczyła monitorowania deformacji gruntu za pomocą InSAR i danych EGMS. Program obejmował praktyczne doświadczenie w pracy z SNAP, QGIS i zobrazowaniami satelitarnymi."
+			},
+			bsc: {
+				title: "B.Sc. Inżynieria Urządzeń Naftowych i Gazowych",
+				desc: "Solidne podstawy inżynierskie skoncentrowane na systemach ropy i gazu, projektowaniu rurociągów i operacjach technicznych w przemyśle energetycznym."
+			}
+			},
+			experience: { meta: "Doświadczenie", title: "Doświadczenie zawodowe" },
+			exp: {
+			qsense: {
+				company: "Qsense",
+				period: "2022–Obecnie",
+				roles: {
+				tech: { title: "Technik:", desc: "Implementacja i utrzymanie systemów, rozwiązywanie problemów technicznych oraz tworzenie dokumentacji." },
+				lead: { title: "Lider zespołu:", desc: "Nadzór nad codziennymi operacjami, optymalizacja pracy i wspieranie współpracy międzydziałowej." },
+				log: { title: "Zespół logistyki:", desc: "Zarządzanie przepływem zapasów, koordynacja wysyłek i obsługa materiałów." },
+				vqc: { title: "Kontroler jakości wizualnej:", desc: "Zapewnienie zgodności produktów ze standardami jakości." }
+				}
+			}
+			},
+			contact: { meta: "Skontaktuj się", title: "Kontakt" }
+		},
+		
+		
+		ru: {
+			role: "Дата-сайентист в Польше",
+			banner: { text: "Это мой персональный сайт-портфолио:" },
+			nav: {
+			home: "Главная",
+			about: "Обо мне",
+			skills: "Навыки",
+			education: "Образование",
+			experience: "Опыт",
+			contact: "Контакты"
+			},
+			hero: {
+			title1: "Привет! <br>Я Илькин",
+			title2: "Я <br>Дата-сайентист",
+			download: "Скачать резюме",
+			portfolio: "Посмотреть портфолио"
+			},
+			about: {
+			meta: "Обо мне",
+			title: "Кто я?",
+			p1: "Я Илькин Азимзаде — многопрофильный технолог с интересом к данным, инновациям и решению реальных задач. Имею прочную базу в области геопространственного анализа, программирования и логистики. В настоящее время учусь в докторантуре по системам управления информацией.",
+			p2: "Мой путь включает технические роли, руководство командами и международные академические программы, объединённые стремлением связывать системы, людей и идеи через умные решения на основе данных."
+			},
+			services: {
+			robotics: "Робототехника и автоматизация",
+			"robotics.desc": "Создание интеллектуальных систем и человекоподобных роботов, объединяющих аппаратное и программное обеспечение.",
+			geospatial: "Геоинформатика и GIS",
+			"geospatial.desc": "Опыт в области дистанционного зондирования, GNSS и геопространственного анализа с использованием QGIS, ArcGIS, EGMS и SNAP.",
+			data_science: "Наука о данных",
+			"data_science.desc": "Уверенно владею Python, R и машинным обучением, имею опыт в практических и системных приложениях.",
+			prototyping: "Прототипирование и 3D-печать",
+			"prototyping.desc": "Проектирование и печать функциональных деталей для робототехники и экспериментальных систем с использованием цифрового производства."
+			},
+			counters: {
+			coffee: "Чашек кофе",
+			projects: "Проекты",
+			courses: "Пройденные курсы",
+			events: "Волонтёрские мероприятия"
+			},
+			skills: {
+			meta: "Моя специализация",
+			title: "Мои навыки",
+			intro: "Я объединяю навыки программирования, пространственного анализа и работы с оборудованием для решения реальных задач — от геоданных до умных робототехнических систем.",
+			python: "Python",
+			"python.level": "50%",
+			remote_sensing: "Дистанционное зондирование (QGIS, SNAP, EGMS)",
+			"remote_sensing.level": "70%"
+			},
+			education: { meta: "Образование", title: "Образование" },
+			edu: {
+			phd: {
+				desc: "Это портфолио отражает мой академический и профессиональный путь, связанный с геопространственными технологиями, машинным обучением и интеллектуальными системами поддержки решений…",
+				points: {
+				focus: { title: "Направление:", text: "Интеграция геоданных, машинного обучения и DSS в реальном времени для реагирования на городские катастрофы." },
+				geoInt: { title: "Геопространственный анализ:", text: "Использование спутниковых данных (Sentinel, Landsat), LiDAR и БПЛА для обнаружения рисков." },
+				ml: { title: "Модели машинного обучения:", text: "Применение методов с учителем (Random Forest, деревья решений), без учителя (кластеризация) и глубокого обучения (CNN, RNN)." },
+				system: { title: "Интеграция систем:", text: "Выявление исследовательских пробелов в системах реального времени для повышения устойчивости городов." },
+				tools: { title: "Инструменты и языки:", text: "Python и R для обработки данных, построения моделей и геоанализа." },
+				future: { title: "Видение будущего:", text: "Развитие объяснимого ИИ, человеко-ориентированного DSS и внедрение в разных городах для умных и устойчивых мегаполисов." }
+				}
+			},
+			msc: {
+				title: "Магистр: Геоматика для управления минеральными ресурсами (двойной диплом)",
+				desc: "Междисциплинарная программа, объединяющая дистанционное зондирование, GIS и анализ геоданных. Магистерская работа была посвящена мониторингу деформации земли с использованием InSAR и EGMS. Программа дала богатый практический опыт работы с SNAP, QGIS и спутниковыми изображениями."
+			},
+			bsc: {
+				title: "Бакалавр: Инженерия нефтегазового оборудования",
+				desc: "Базовое инженерное образование, сосредоточенное на нефтегазовых системах, проектировании трубопроводов и технических операциях в энергетической отрасли."
+			}
+			},
+			experience: { meta: "Опыт", title: "Опыт работы" },
+			exp: {
+			qsense: {
+				company: "Qsense",
+				period: "2022–настоящее время",
+				roles: {
+				tech: { title: "Техник:", desc: "Внедрение и обслуживание систем, решение технических проблем и подготовка документации." },
+				lead: { title: "Руководитель команды:", desc: "Координация повседневных процессов, оптимизация рабочего потока и поддержка взаимодействия между отделами." },
+				log: { title: "Логистика:", desc: "Управление запасами, координация поставок и обработка материалов." },
+				vqc: { title: "Контролёр качества:", desc: "Обеспечение соответствия продукции стандартам качества." }
+				}
+			}
+			},
+			contact: { meta: "Связаться", title: "Контакты" }
+		},
+
+		az: {
+			role: "Polşada Data Scientist",
+			banner: { text: "Bu mənim şəxsi layihə saytım:" },
+			nav: {
+			home: "Ana səhifə",
+			about: "Haqqımda",
+			skills: "Bacarıqlar",
+			education: "Təhsil",
+			experience: "Təcrübə",
+			contact: "Əlaqə"
+			},
+			hero: {
+			title1: "Salam! <br>Mən İlkin",
+			title2: "Mən <br>Data Scientistəm",
+			download: "CV-ni yüklə",
+			portfolio: "Portfolioma bax"
+			},
+			about: {
+			meta: "Haqqımda",
+			title: "Mən kiməm?",
+			p1: "Mən İlkin Azimzadə — məlumat, innovasiya və real problemlərin həllinə marağı olan multidisiplinar texnoloqam. Geoməkan analizi, proqramlaşdırma və logistika üzrə güclü baza ilə hazırda Menecment İnformasiya Sistemləri üzrə doktorantura təhsili alıram.",
+			p2: "Yolum texniki rollar, komanda rəhbərliyi və beynəlxalq akademik proqramlardan keçib. Məqsədim sistemləri, insanları və ideyaları ağıllı, məlumat əsaslı həllərlə birləşdirməkdir. İstər robot texnologiyaları, istərsə də 3D çap və ya geodata elmi olsun — mən texnologiya ilə təsirin kəsişməsində inkişaf edirəm."
+			},
+			services: {
+			robotics: "Robototexnika və Avtomatlaşdırma",
+			"robotics.desc": "Ağıllı sistemlər və aparat-proqram inteqrasiyası ilə humanoid robotların hazırlanması.",
+			geospatial: "Geoməkan və GIS",
+			"geospatial.desc": "QGIS, ArcGIS, EGMS və SNAP vasitəsilə uzaqdan zondlama, GNSS və geoməkan analizi üzrə mütəxəssis.",
+			data_science: "Data Elmi",
+			"data_science.desc": "Python, R və maşın öyrənməsində bacarıqlı, həm praktik, həm də sistem səviyyəsində tətbiq təcrübəsi var.",
+			prototyping: "Prototipləşdirmə və 3D Çap",
+			"prototyping.desc": "Robototexnika və eksperimental sistemlər üçün funksional hissələrin layihələndirilməsi və çapı."
+			},
+			counters: {
+			coffee: "İçilən qəhvə fincanı",
+			projects: "Layihələr",
+			courses: "Bitirdiyim kurslar",
+			events: "Könüllü olduğum tədbirlər"
+			},
+			skills: {
+			meta: "İxtisasım",
+			title: "Bacarıqlarım",
+			intro: "Mən proqramlaşdırma, məkan analizi və hardware biliklərini birləşdirərək real problemləri həll edirəm — geodata axınlarından ağıllı robototexnikaya qədər.",
+			python: "Python",
+			"python.level": "50%",
+			remote_sensing: "Uzaqdan Zondlama (QGIS, SNAP, EGMS)",
+			"remote_sensing.level": "70%"
+			},
+			education: { meta: "Təhsil", title: "Təhsil" },
+			edu: {
+			phd: {
+				desc: "Bu portfoliom mənim geoməkan texnologiyaları, maşın öyrənməsi və ağıllı qərar dəstək sistemləri üzrə akademik və peşəkar yolumu əks etdirir…",
+				points: {
+				focus: { title: "Fokus:", text: "Şəhər fövqəladə hallarında real vaxt rejimində cavab üçün geoməkan məlumatı, maşın öyrənməsi və DSS inteqrasiyası." },
+				geoInt: { title: "Geoməkan Kəşfiyyatı:", text: "Çoxriskli aşkarlama üçün peyk təsvirləri (Sentinel, Landsat), LiDAR və PUA-lardan istifadə." },
+				ml: { title: "Maşın Öyrənməsi Modelləri:", text: "Nəzarətli (Random Forest, Decision Tree), nəzarətsiz (Klastirləşmə) və dərin öyrənmə (CNN, RNN) metodları tətbiq olunub." },
+				system: { title: "Sistem İnkişafı:", text: "Şəhər dayanıqlılığı üçün real vaxtlı, ucdan-uca sistemlərdə tədqiqat boşluqlarını müəyyənləşdirmək." },
+				tools: { title: "Alətlər və Dillər:", text: "Məlumatların işlənməsi, ML modeli qurulması və geoməkan analizi üçün Python və R." },
+				future: { title: "Gələcək Baxış:", text: "İzah edilə bilən AI, istifadəçi yönümlü DSS dizaynı və ağıllı, dayanıqlı şəhərlər üçün tətbiqi."
+				}
+				}
+			},
+			msc: {
+				title: "Magistr: Mineral Resursların İdarəedilməsi üçün Geomatika (İkili Diplom)",
+				desc: "Uzaqdan zondlama, GIS və geoməkan analizi birləşdirən multidisiplinar proqram. Magistr dissertasiyası InSAR və EGMS ilə torpaq deformasiyası monitorinqinə həsr olunmuşdur. Proqram SNAP, QGIS və peyk təsvirləri ilə geniş praktik təcrübə təmin edib."
+			},
+			bsc: {
+				title: "Bakalavr: Neft və Qaz Avadanlıqları Mühəndisliyi",
+				desc: "Enerji sənayesində neft-qaz sistemləri, boru kəməri dizaynı və texniki əməliyyatlar üzrə əsas mühəndislik bilikləri."
+			}
+			},
+			experience: { meta: "Təcrübə", title: "İş Təcrübəsi" },
+			exp: {
+			qsense: {
+				company: "Qsense",
+				period: "2022–indiyədək",
+				roles: {
+				tech: { title: "Texnik:", desc: "Sistemlərin quraşdırılması və saxlanılması, texniki problemlərin həlli və sənədlərin hazırlanması." },
+				lead: { title: "Komanda Lideri:", desc: "Gündəlik əməliyyatların idarə olunması, iş axınının optimallaşdırılması və komandalararası əməkdaşlığın dəstəklənməsi." },
+				log: { title: "Logistika Komandası:", desc: "Anbar idarəsi, göndərişlərin əlaqələndirilməsi və materialların idarə olunması." },
+				vqc: { title: "Vizual Keyfiyyət Nəzarətçisi:", desc: "Məhsulların standartlara uyğunluğunu təmin etmək." }
+				}
+			}
+			},
+			contact: { meta: "Əlaqə saxlayın", title: "Əlaqə" }
+		}
+
+	};
+
+
+	/* --- helpers --- */
+	function getTextByKey(key, locale) {
+		const parts = key.split(".");
+		let obj = i18n[locale] || i18n.en;
+		for (const p of parts) obj = (obj || {})[p];
+		return (typeof obj === "string") ? obj : null;
+	}
+
+	function applyTranslations(locale) {
+		document.querySelectorAll("[data-i18n]").forEach(el => {
+			const key = el.getAttribute("data-i18n");
+			const txt = getTextByKey(key, locale);
+			if (!txt) return;
+
+			const tag = el.tagName.toLowerCase();
+			if ((tag === "input" || tag === "textarea") && el.hasAttribute("placeholder")) {
+				el.placeholder = txt;
+			} else {
+				el.textContent = txt;
+			}
+		});
+		document.documentElement.setAttribute("lang", locale);
+	}
+
+	/* --- boot --- */
+	(function initI18N(){
+		const select = document.getElementById("lang-switch");
+		if (!select) return;
+
+		// load saved or default language
+		const saved = localStorage.getItem("lang") || "en";
+		select.value = saved;
+		applyTranslations(saved);
+
+	// handle changes
+		select.addEventListener("change", e => {
+			const locale = e.target.value || "en";
+			localStorage.setItem("lang", locale);
+			applyTranslations(locale);
+		});
+	})();
+	</script>
+
 	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+	<script type="module" src="js/main.js"></script>
 
 	</body>
 </html>

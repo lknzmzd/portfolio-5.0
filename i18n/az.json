@@ -1,0 +1,12 @@
+{
+  "nav": { "home": "Home", "about": "About", "skills": "Skills", "education": "Education", "experience": "Experience", "contact": "Contact" },
+  "sidebar": { "role": "Data Scientist", "country": "in Poland" },
+  "hero": { "title1": "Hi! <br>I'm Ilkin", "download": "Download CV", "title2": "I am <br>a Data Scientist", "portfolio": "View Portfolio" },
+  "about": { "meta": "About Us", "title": "Who Am I?", "p1": "I'm Ilkin Azimzade — a multidisciplinary technologist…", "p2": "My journey has taken me…" },
+  "counters": { "coffee": "Cups of coffee", "projects": "Projects", "courses": "Courses I Have Completed", "events": "Events Volunteered" },
+  "skills": { "meta": "My Specialty", "title": "My Skills", "intro": "I combine strong coding…" },
+  "education": { "meta": "Education", "title": "Education" },
+  "experience": { "meta": "Experience", "title": "Work Experience" },
+  "contact": { "meta": "Get in Touch", "title": "Contact" },
+  "banner": { "text": "This is my personal project website:" }
+}

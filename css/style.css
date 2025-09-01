@@ -1473,3 +1473,39 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+/* === Language switcher === */
+.lang-switch {
+  margin: 12px auto 0;
+  width: 140px;
+}
+.lang-switch select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+}
+.sr-only { 
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; 
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
+
+#colorlib-aside #colorlib-main-menu .lang-switcher{
+  margin: 12px auto 0;
+  width: 80%;
+  text-align: center;
+}
+#colorlib-aside #colorlib-main-menu .lang-switcher select{
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  border-radius: 4px;
+}
+@media (max-width: 768px){
+  #colorlib-aside #colorlib-main-menu .lang-switcher{ width: 90%; }
+}
