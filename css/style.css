@@ -658,6 +658,7 @@ body.offcanvas {
   -ms-filter: alpha(opacity=40);
   filter: alpha(opacity=40);
   font-size: 16px; }
+  color: var(--muted); /* adapts to dark/light mode */
 
 .services {
   margin-bottom: 30px;
@@ -1508,4 +1509,253 @@ body.offcanvas {
 }
 @media (max-width: 768px){
   #colorlib-aside #colorlib-main-menu .lang-switcher{ width: 90%; }
+}
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #ffffff;
+  --bg-2: #f2f3f7;        /* sidebar / cards */
+  --text: #111111;
+  --muted: rgba(0,0,0,0.6);
+  --card: #f2f3f7;
+  --border: #e6e6e6;
+  --link: #2c98f0;
+  --primary: #2c98f0;
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --bg-2: #161a22;
+  --text: #e8eef9;
+  --muted: rgba(232,238,249,0.65);
+  --card: #161a22;
+  --border: #2a2f3a;
+  --link: #7bb6ff;
+  --primary: #66a8ff;
+}
+
+/* Apply to main areas */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+#colorlib-aside { background: var(--bg-2); }
+#colorlib-logo a { color: var(--text); }
+#colorlib-aside .position a { color: var(--muted); }
+
+a { color: var(--link); }
+a:hover, a:focus { color: var(--primary); }
+
+/* Cards / panels / timeline bubbles */
+.services,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label,
+.panel-body,
+.panel-heading a.collapsed {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border) !important;
+}
+.panel-heading a {
+  background-color: var(--primary);
+  color: #fff;
+}
+.panel-heading a.collapsed {
+  background: var(--card);
+  color: var(--text);
+}
+.heading-meta { color: var(--muted); }
+
+/* Counters section – labels readable in dark */
+.colorlib-counter-label { color: var(--muted); }
+
+/* Top banner */
+.top-banner { background-color: #222; }
+html[data-theme="dark"] .top-banner { background-color: #0b0d11; }
+
+/* Navbar links */
+#colorlib-aside #colorlib-main-menu ul li a { color: var(--muted); }
+#colorlib-aside #colorlib-main-menu ul li a:hover { color: var(--text); }
+#colorlib-aside #colorlib-main-menu ul li.active a { color: var(--primary); }
+
+/* Inputs */
+.form-control {
+  background: var(--card);
+  color: var(--text);
+}
+.form-control::placeholder { color: var(--muted); }
+
+/* Theme switch (cute toggle) */
+.theme-switch { display:flex; justify-content:center; }
+.switch { display:inline-flex; align-items:center; gap:.5rem; cursor:pointer; }
+.switch input { display:none; }
+.switch .slider {
+  width: 44px; height: 24px; border-radius: 999px;
+  background: var(--border); position: relative; transition: background .2s ease;
+}
+.switch .slider::after {
+  content: ""; position: absolute; top: 3px; left: 3px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--bg); transition: transform .2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.switch input:checked + .slider { background: var(--primary); }
+.switch input:checked + .slider::after { transform: translateX(20px); }
+.theme-label { font-size: 12px; color: var(--muted); }
+
+/* Optional: lighten borders in dark mode on timeline line */
+html[data-theme="dark"] .timeline-centered:before { background: var(--border); }
+/* ===== Fix language select for light/dark ===== */
+.lang-switch {
+  margin: 12px auto 0;
+  width: 140px;
+}
+
+.lang-switch select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 4px;
+  outline: none;
+  appearance: none;           /* remove native arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Give the select a custom arrow that adapts to theme */
+.lang-switch select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+    linear-gradient(var(--border), var(--border));
+  background-position:
+    calc(100% - 16px) 50%,
+    calc(100% - 11px) 50%,
+    calc(100% - 2.2em) 50%;
+  background-size: 6px 6px, 6px 6px, 1px 65%;
+  background-repeat: no-repeat;
+  padding-right: 2.6em; /* space for arrow */
+}
+
+/* Dropdown items (most browsers) */
+.lang-switch select option {
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+/* Firefox needs this to ensure contrast in dark mode */
+@-moz-document url-prefix() {
+  .lang-switch select option {
+    background-color: var(--bg-2);
+    color: var(--text);
+  }
+}
+
+/* High-contrast focus state */
+.lang-switch select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+/* Sidebar version if you also use #colorlib-aside block styling */
+#colorlib-aside #colorlib-main-menu .lang-switch {
+  width: 80%;
+  text-align: center;
+}
+#colorlib-aside #colorlib-main-menu .lang-switch select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Fix section titles in dark mode */
+html[data-theme="dark"] .colorlib-heading {
+  color: #ffffff !important;  /* pure white */
+}
+
+/* Restore colorful borders */
+.services.color-2 { border-bottom-color: #ec5453 !important; }
+.services.color-3 { border-bottom-color: #f9bf3f !important; }
+.services.color-4 { border-bottom-color: #a84cb8 !important; }
+.services.color-5 { border-bottom-color: #2fa499 !important; }
+.services.color-6 { border-bottom-color: #4054b2 !important; }
+
+/* If you use the SMALL icon style (.icon2), keep these so icons match the border */
+.services.color-2 .icon2 i { color: #ec5453; }
+.services.color-3 .icon2 i { color: #f9bf3f; }
+.services.color-4 .icon2 i { color: #a84cb8; }
+.services.color-5 .icon2 i { color: #2fa499; }
+.services.color-6 .icon2 i { color: #4054b2; }
+
+/* Center the language selector inside the sidebar menu */
+#colorlib-aside #colorlib-main-menu .lang-switch {
+  width: 160px;              /* desired dropdown width */
+  margin: 12px auto 0;       /* centers it horizontally */
+  display: flex;
+  justify-content: center;   /* keep it centered if container grows */
+}
+
+/* Make the <select> fit the fixed width above */
+#colorlib-aside #colorlib-main-menu .lang-switch select {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Keep it centered on small screens too */
+@media (max-width: 768px) {
+  #colorlib-aside #colorlib-main-menu .lang-switch {
+    width: 170px;            /* optional: a touch wider on mobile */
+  }
+}
+
+/* Center the dark-mode toggle to match the dropdown */
+.theme-switch {
+  width: 160px;
+  margin: 10px auto 20px;    /* centers it under the dropdown */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+/* --- fix social icon colors for both themes --- */
+
+/* 1) add/override a variable for icon color */
+:root {
+  --icon: #7a7f87;           /* medium gray for light mode */
+}
+html[data-theme="dark"] {
+  --icon: #c7d0db;           /* softer light color for dark mode */
+}
+
+/* 2) apply it to the sidebar footer icons */
+#colorlib-aside .colorlib-footer ul li a {
+  color: var(--icon) !important;
+  transition: color .2s ease;
+}
+#colorlib-aside .colorlib-footer ul li a:hover,
+#colorlib-aside .colorlib-footer ul li a:focus {
+  color: var(--primary) !important;
+}
+
+/* 3) if you also use the 'colorlib-social' icon row anywhere */
+.colorlib-social li a {
+  color: var(--icon) !important;
+}
+.colorlib-social li a:hover,
+.colorlib-social li a:focus {
+  color: var(--primary) !important;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label li,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label span {
+  color: var(--text);
 }
